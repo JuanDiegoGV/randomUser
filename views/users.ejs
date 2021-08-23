@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random user</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>your random user is:</h1>
+
+    <div class="container">
+
+        <div class="imgContainer">
+            <img src="<%= user.picture.large %>" class="imgUser" alt="user photo">
+        </div>
+
+        <div class="textContainer">
+
+            <h3 class="userName">
+                <%= user.name.first %>
+                <%= user.name.last %>
+            </h3>
+            <h3 class="userAge">
+                <%= user.dob.age %>
+            </h3>
+            <h3 class="userLocation">
+                <p>
+                <%= user.location.city %>, <%= user.location.state %>, <%= user.location.country %>
+                </p>
+            </h3>
+            <h3 class="userEmail">
+                <%= user.email %>
+            </h3>
+            <h3 class="userCountry">
+                <%= user.phone %>
+            </h3>
+
+        </div>
+
+        <div class="options">
+            <ul>
+                <li class="age">age</li>
+                <li class="location">location</li>
+                <li class="email">email</li>
+                <li class="country">phone</li>
+            </ul>
+        </div>
+    </div>
+
+    <a class="button" onClick="window.location.reload(true)"> new user </a>
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
